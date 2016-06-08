@@ -1,0 +1,43 @@
+<h3>Education <span class="label label-primary">{{eduVm.education.length}}</span></h3>
+
+<table class="table table-condensed table-striped table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="table-head">
+            <input type="text" class="form-control input-sm"
+                   ng-model="eduVm.institute.name"
+                   ng-keydown="eduVm.sendData($event)">
+            <i class="clean" ng-show="eduVm.institute.name.length" ng-click="eduVm.reset()">&times;</i>
+        </td>
+        <td>
+            <button class="btn btn-success btn-sm"
+                    ng-click="eduVm.create(eduVm.institute)"
+                    ng-disabled="!eduVm.institute.name.length">
+                <i class="fa fa-plus"></i> Create
+            </button>
+            <button class="btn btn-primary btn-sm"
+                    ng-click="eduVm.update(eduVm.institute)"
+                    ng-disabled="!eduVm.getId() || !eduVm.institute.name.length">
+                <i class="fa fa-refresh"></i> Update
+            </button>
+        </td>
+    </tr>
+    <tr ng-repeat="institute in eduVm.education">
+        <td>{{institute.name}}</td>
+        <td>
+            <button ng-click="eduVm.edit(institute)" class="btn btn-sm btn-warning">
+                <i class="fa fa-pencil"></i> Edit
+            </button>
+            <button ng-click="eduVm.delete(institute)" class="btn btn-sm btn-danger">
+                <i class="fa fa-remove"></i> Delete
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>

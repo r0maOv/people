@@ -1,0 +1,45 @@
+<h3>New Person</h3>
+
+<div class="person">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#private" aria-controls="home" role="tab" data-toggle="tab">Private</a>
+        </li>
+        <li role="presentation">
+            <a href="#family" role="tab" data-toggle="tab">Family</a>
+        </li>
+        <li role="presentation">
+            <a href="#education" role="tab" data-toggle="tab">Education</a>
+        </li>
+        <li role="presentation">
+            <a href="#military" aria-controls="settings" role="tab" data-toggle="tab">Military</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="private">
+            <div ng-include="'./views/partials/person/private.html'"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="family">
+            <div ng-include="'./views/partials/person/family.html'"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="education">
+            <div ng-include="'./views/partials/person/education.html'"></div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="military">
+            <div ng-include="'./views/partials/person/military.html'"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.nav a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show')
+        })
+    })
+</script>
