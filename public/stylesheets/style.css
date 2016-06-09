@@ -83,6 +83,12 @@ table td, table th {
 .person .nav {
   margin-bottom: 15px; }
 
+.promo-cell input[type='text'] {
+  width: 90%;
+  display: inline-block; }
+.promo-cell i {
+  cursor: pointer; }
+
 .footer {
   border-top: thick solid #e1e0de;
   padding: 10px; }
