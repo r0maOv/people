@@ -5,6 +5,7 @@
   font-weight: normal
   font-style: normal
 
+@import "../../bower_components/bootstrap/dist/css/bootstrap.css"
 
 body
   font: 12pt/normal Futura !important
@@ -19,10 +20,31 @@ h3 > span.label
   font-size: 60%
   vertical-align: middle
 
+.btn-lg
+  border-radius: 4px !important
+
+
+// PROFILE INFO
+.profile
+  width: 600px
+  text-align: center
+  .form-group
+    margin: 0
+    padding: 5px
+    border-top: 1px solid #ddd
+    &:nth-of-type(odd)
+      background-color: #f9f9f9
+    label
+      text-align: left !important
+      &:not(.btn)
+        width: 95%
+      input[type="text"]
+        margin-top: 5px
+
+
+
 table
-  tr td:nth-child(2n + 1)
-    width: 80%
-  & td, & th
+  td, th
     vertical-align: middle !important
 
 .header
@@ -45,6 +67,7 @@ table
     right: 12px
     cursor: pointer
     font-style: normal
+
 
 
 .modal-wrapper

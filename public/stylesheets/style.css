@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(../../bower_components/bootstrap/dist/css/bootstrap.css);
 @font-face {
   font-family: "Futura";
   src: url("../fonts/16023_FUTURAN.eot");
@@ -18,8 +19,25 @@ h3 > span.label {
   font-size: 60%;
   vertical-align: middle; }
 
-table tr td:nth-child(2n + 1) {
-  width: 80%; }
+.btn-lg {
+  border-radius: 4px !important; }
+
+.profile {
+  width: 600px;
+  text-align: center; }
+  .profile .form-group {
+    margin: 0;
+    padding: 5px;
+    border-top: 1px solid #ddd; }
+    .profile .form-group:nth-of-type(odd) {
+      background-color: #f9f9f9; }
+    .profile .form-group label {
+      text-align: left !important; }
+      .profile .form-group label:not(.btn) {
+        width: 95%; }
+      .profile .form-group label input[type="text"] {
+        margin-top: 5px; }
+
 table td, table th {
   vertical-align: middle !important; }
 

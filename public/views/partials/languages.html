@@ -30,7 +30,6 @@
     </tr>
     <tr ng-repeat="language in langVm.languages">
         <td>
-            <!--<input type="checkbox">-->
             {{language.name}}
         </td>
         <td>
@@ -45,21 +44,4 @@
     </tbody>
 </table>
 
-<div class="modal-wrapper" ng-show="langVm.isOpened">
-    <div class="modal-window">
-        <div class="modal-window__header">
-            <i class="close-window" ng-click="langVm.hideModal()">&times;</i>
-        </div>
-        <div class="modal-window__body">
-            Are you sure you want to delete the item "{{langVm.langName}}"?
-        </div>
-        <div class="modal-window__footer">
-            <button class="btn btn-sm btn-danger" ng-click="langVm.delete()">
-                <i class="fa fa-close"></i> Delete
-            </button>
-            <button class="btn btn-sm btn-default" ng-click="langVm.hideModal()">
-                <i class="fa fa-refresh"></i> Cancel
-            </button>
-        </div>
-    </div>
-</div>
+<modal ctrl="langVm" item-name="langVm.langName"></modal>

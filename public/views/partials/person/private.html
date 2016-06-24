@@ -1,26 +1,43 @@
-<table class="table table-condensed table-hover table-striped">
-    <tr>
-        <td>First Name</td>
-        <td><input type="text" class="form-control input-sm"></td>
-    </tr>
-    <tr>
-        <td>Last Name</td>
-        <td><input type="text" class="form-control input-sm"></td>
-    </tr>
-    <tr>
-        <td>Middle Name</td>
-        <td><input type="text" class="form-control input-sm"></td>
-    </tr>
-    <tr>
-        <td>Date of Birtd</td>
-        <td><input type="text" class="form-control input-sm"></td>
-    </tr>
-    <tr>
-        <td>Place of Birtd</td>
-        <td><input type="text" class="form-control input-sm"></td>
-    </tr>
-    <tr>
-        <td>Address</td>
-        <td><input type="text" class="form-control input-sm"></td>
-    </tr>
-</table>
+<div ng-show="selected" ng-init="selected = true">
+
+    <h1>{{title | firstLetter}}</h1>
+    {{PVm.test}}
+
+    <table class="table table-condensed table-hover table-striped">
+        <tr>
+            <td>Profile Picture</td>
+            <td>
+                <label class="btn btn-primary">
+                    <i class="fa fa-photo"></i> Choose a photo
+                    <!--<input type="file" upload-file="profile" class="upload-file" style="display: none">-->
+                </label>
+                <!--<span id="file-name"></span>-->
+            </td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" class="form-control input-sm" ng-model="PVm.person.firstName"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" class="form-control input-sm" ></td>
+        </tr>
+        <tr>
+            <td>Middle Name</td>
+            <td><input type="text" class="form-control input-sm" ></td>
+        </tr>
+        <tr>
+            <td>Date of Birtd</td>
+            <td><input type="text" class="form-control input-sm" ></td>
+        </tr>
+        <tr>
+            <td>Place of Birtd</td>
+            <td><input type="text" class="form-control input-sm" ></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" class="form-control input-sm" ></td>
+        </tr>
+    </table>
+
+</div>

@@ -45,11 +45,27 @@ angular.module('people')
         };
 
 
-        self.delete = function (el) {
+        self.showModal = function (el) {
+            self.isOpened = true;
+            dbId = el._id;
             elId = self.education.indexOf(el);
-            $http.delete('/api/education/' + el._id).then(function () {
+            self.eduName = el.name;
+        };
+
+        
+        self.hideModal = function () {
+            self.isOpened = false;
+            dbId = null;
+            elId = null;
+        };
+
+
+        self.delete = function () {
+            $http.delete('/api/education/' + dbId).then(function () {
                 self.education.splice(elId, 1);
+                self.isOpened = false;
                 dbId = null;
+                elId = null;
             });
         };
 

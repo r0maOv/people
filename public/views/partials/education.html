@@ -34,10 +34,12 @@
             <button ng-click="eduVm.edit(institute)" class="btn btn-sm btn-warning">
                 <i class="fa fa-pencil"></i> Edit
             </button>
-            <button ng-click="eduVm.delete(institute)" class="btn btn-sm btn-danger">
+            <button ng-click="eduVm.showModal(institute)" class="btn btn-sm btn-danger">
                 <i class="fa fa-remove"></i> Delete
             </button>
         </td>
     </tr>
     </tbody>
 </table>
+
+<modal ctrl="eduVm" item-name="eduVm.eduName"></modal>

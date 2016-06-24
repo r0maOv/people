@@ -1,0 +1,18 @@
+<div class="modal-wrapper" ng-show="ctrlVm.isOpened">
+    <div class="modal-window">
+        <div class="modal-window__header">
+            <i class="close-window" ng-click="ctrlVm.hideModal()">&times;</i>
+        </div>
+        <div class="modal-window__body">
+            Are you sure you want to delete the item "{{itemName}}"?
+        </div>
+        <div class="modal-window__footer">
+            <button class="btn btn-sm btn-danger" ng-click="ctrlVm.delete()">
+                <i class="fa fa-close"></i> Delete
+            </button>
+            <button class="btn btn-sm btn-default" ng-click="ctrlVm.hideModal()">
+                <i class="fa fa-refresh"></i> Cancel
+            </button>
+        </div>
+    </div>
+</div>

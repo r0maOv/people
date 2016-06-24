@@ -1,40 +1,47 @@
-angular.module('people', ['ui.router', 'ngRoute'])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+var app = angular.module('people', ['ui.router', 'ngRoute']);
+    
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-        $locationProvider.html5Mode({ enabled: true });
+    $locationProvider.html5Mode({ enabled: true });
 
-        $urlRouterProvider.otherwise('/404');
+    $urlRouterProvider.otherwise('/404');
 
-        $stateProvider
-            .state('home', {
-                url: "/",
-                templateUrl: "partials/list.html"
-            })
-            .state('language', {
-                url: "/languages",
-                templateUrl: "partials/languages.html",
-                controller: 'LanguageCtrl',
-                controllerAs: 'langVm'
-            })
-            .state('education', {
-                url: "/education",
-                templateUrl: "partials/education.html",
-                controller: 'EducationCtrl',
-                controllerAs: 'eduVm'
-            })
-            .state('person', {
-                url: "/person",
-                templateUrl: "partials/person.html",
-                controller: 'PersonCtrl',
-                controllerAs: 'PVm'
-            })
-            .state('not-found', {
-                url: "/404",
-                templateUrl: "partials/404.html"
-            });
-    })
-    .directive('modalWrapper', function () {
-        return {
+    $stateProvider
+        .state('home', {
+            url: "/",
+            templateUrl: "partials/list.html"
+        })
+        .state('language', {
+            url: "/languages",
+            templateUrl: "partials/languages.html",
+            controller: 'LanguageCtrl',
+            controllerAs: 'langVm'
+        })
+        .state('education', {
+            url: "/education",
+            templateUrl: "partials/education.html",
+            controller: 'EducationCtrl',
+            controllerAs: 'eduVm'
+        })
+        .state('person', {
+            url: "/person",
+            templateUrl: "partials/person.html",
+            controller: 'PersonCtrl',
+            controllerAs: 'PVm'
+        })
+        .state('not-found', {
+            url: "/404",
+            templateUrl: "partials/404.html"
+        });
+});
 
-        }
-    });
+app.directive('modal', function () {
+    return {
+        restrict: 'E',
+        scope: {
+            ctrlVm: '=ctrl',
+            itemName: '='
+        },
+        templateUrl: './views/tmpl/modal.html'
+    }
+});
