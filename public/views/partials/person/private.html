@@ -2,6 +2,8 @@
 
     <h1>{{title | firstLetter}}</h1>
 
+    {{PVm.data}}
+
     <table class="table table-condensed table-hover table-striped">
         <tr>
             <td>Profile Picture</td>
@@ -15,11 +17,11 @@
         </tr>
         <tr>
             <td>First Name</td>
-            <td><input type="text" class="form-control input-sm" ng-model="private.firstName"></td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.firstName"></td>
         </tr>
         <tr>
             <td>Last Name</td>
-            <td><input type="text" class="form-control input-sm" ></td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.lastName"></td>
         </tr>
         <tr>
             <td>Middle Name</td>

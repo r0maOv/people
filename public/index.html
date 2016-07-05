@@ -22,11 +22,12 @@
             </ul>
         </nav>
 
-        <button ui-sref="person" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Add person</button>
+        <i class="fa fa-user-plus" ui-sref="person"></i>
+        <!--<button ui-sref="person" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Add person</button>-->
 
     </div>
 
-    <div ui-view></div>
+    <div ui-view class="content"></div>
 
     <div class="footer">
         &copy; 2016. Developed by Roman Ovchinnik
@@ -36,6 +37,7 @@
     <script src="/bower/angular-route/angular-route.js"></script>
     <script src="/bower/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower/ng-file-upload/ng-file-upload.js"></script>
     <script src="/javascripts/myScripts.js"></script>
     <script src="/javascripts/controllers/main.js"></script>
     <script src="/javascripts/controllers/language.js"></script>
