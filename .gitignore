@@ -1,0 +1,9 @@
+# webstorm config #
+.idea
+
+# trash
+.DS_Store
+
+# packages #
+node_modules/
+bower_components/

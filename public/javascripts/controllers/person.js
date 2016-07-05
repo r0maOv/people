@@ -6,9 +6,26 @@ app.controller('PersonCtrl', ['$scope', '$http', 'FileUpload', function ($scope,
     self.callSrv = function () {
         // FileUpload.uploadFileToUrl(self.profile, '/api/people');
     };
-    
+
+    this.tabs = $scope.tabs = [];
+
+    $scope.selectTab = function (tab) {
+        angular.forEach($scope.tabs, function (tab) {
+            tab.selected = false
+        });
+        tab.selected = true;
+    };
+
+    this.addTab = function (tab) {
+        $scope.tabs.push(tab);
+    };
+
+
+
     self.test = 'test';
-    
+
+    self.person = {};
+
     self.postData = function () {
         console.log(self.person);
     };
@@ -39,20 +56,21 @@ app.directive('tabs', [function () {
     return {
         restrict: 'E',
         scope: true,
-        controller: ['$scope', function ($scope) {
-            this.tabs = $scope.tabs = [];
-
-            $scope.selectTab = function (tab) {
-                angular.forEach($scope.tabs, function (tab) {
-                    tab.selected = false
-                });
-                tab.selected = true;
-            };
-
-            this.addTab = function (tab) {
-              $scope.tabs.push(tab);
-            };
-        }],
+        // controller: ['$scope', function ($scope) {
+        //     this.tabs = $scope.tabs = [];
+        //
+        //     $scope.selectTab = function (tab) {
+        //         angular.forEach($scope.tabs, function (tab) {
+        //             tab.selected = false
+        //         });
+        //         tab.selected = true;
+        //     };
+        //
+        //     this.addTab = function (tab) {
+        //       $scope.tabs.push(tab);
+        //     };
+        // }],
+        controller: 'PersonCtrl',
         transclude: true,
         template:
             '<div class="tabs"><h1>{{title}}</h1>' +
@@ -72,11 +90,14 @@ app.directive('tab', function () {
         require: '^tabs',
         // make title visible inside the directive scope
         scope: {
-            title: '@',
-            pVm: '@ctrl'
+            title: '@'
+            // PVm: '@myCtrl'
         },
         link: function (scope, elem, attrs, ctrl) {
             ctrl.addTab(scope);
+
+            console.log(ctrl);
+
         },
         transclude: true,
         templateUrl: function (el, attr) {
