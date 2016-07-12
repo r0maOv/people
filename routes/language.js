@@ -1,7 +1,7 @@
 var express  = require('express');
 var router   = express.Router();
 
-var languages  = require('languages');
+var languages  = require('../config/languages');
 var langsCodes = languages.getAllLanguageCode();
 var langsNames = [];
 

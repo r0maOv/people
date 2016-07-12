@@ -1,6 +1,6 @@
 var app = angular.module('people');
 
-app.controller('PersonCtrl', ['$http', '$scope', 'Upload', 'fileUpload', function ($http, $scope, Upload, fileUpload) {
+app.controller('PersonCtrl', ['$http', '$scope', 'fileUpload', function ($http, $scope, fileUpload) { 
     var self = this;
 
     // fill dropdowns with data

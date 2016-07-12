@@ -10,7 +10,7 @@ var sass         = require('node-sass');
 // routes paths
 var langRoute = require('./routes/language');
 var eduRoute  = require('./routes/education');
-var pplRoute = require('./routes/people');
+var pplRoute  = require('./routes/people');
 
 // SASS init
 sass.render({
@@ -37,6 +37,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower', express.static(path.join(__dirname, '/bower_components')));
+app.use('/config', express.static(path.join(__dirname, '/config')));
 
 // routes
 app.use('/api/languages', langRoute);

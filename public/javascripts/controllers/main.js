@@ -1,4 +1,4 @@
-var app = angular.module('people', ['ui.router', 'ngRoute', 'localytics.directives', 'ngFileUpload']);
+var app = angular.module('people', ['ui.router', 'ngRoute', 'localytics.directives']);
     
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/bower/components-font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/bower/chosen/chosen.css">
@@ -14,7 +14,9 @@
 <div class="container">
     <div class="header">
 
-        <h2 ui-sref="home">People</h2>
+        <h2 ui-sref="home">
+            <img src="images/logo.png" alt="">
+        </h2>
 
         <nav>
             <ul class="nav nav-pills">
@@ -46,10 +48,6 @@
     <!-- JQUERY CHOSEN -->
     <script src="/bower/angular-chosen-localytics/dist/angular-chosen.js"></script>
     <script src="/bower/chosen/chosen.jquery.js"></script>
-
-    <!-- FILE UPLOAD -->
-    <script src="/bower/ng-file-upload/ng-file-upload.js"></script>
-    <script src="/bower/ng-file-upload/ng-file-upload-shim.js"></script>
 
     <!-- CONTROLLERS -->
     <script src="/javascripts/controllers/main.js"></script>

@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Futura";
   src: url("../fonts/16023_FUTURAN.eot");
-  src: local("☺"), url("../fonts/16023_FUTURAN.woff") format("woff"), url("../fonts/16023_FUTURAN.ttf") format("truetype"), url("../fonts/16023_FUTURAN.svg") format("svg");
+  src: local("тШ║"), url("../fonts/16023_FUTURAN.woff") format("woff"), url("../fonts/16023_FUTURAN.ttf") format("truetype"), url("../fonts/16023_FUTURAN.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -69,9 +69,11 @@ h3 > span.label {
   .header h2 {
     display: inline-block;
     margin: 0;
-    padding: 0 0 5px 15px; }
+    padding: 0 15px 5px 15px; }
     .header h2:hover {
       cursor: pointer; }
+    .header h2 img {
+      width: 50px; }
   .header nav {
     display: inline-block;
     vertical-align: bottom; }
@@ -83,7 +85,8 @@ h3 > span.label {
     font-size: 18pt !important;
     color: #3382c9;
     cursor: pointer;
-    margin-left: 15px; }
+    margin-left: 15px;
+    vertical-align: middle; }
     .header .fa-user-plus:hover {
       font-size: 20pt !important; }
 
