@@ -1,4 +1,4 @@
-var app = angular.module('people', ['ui.router', 'ngRoute', 'ngFileUpload']);
+var app = angular.module('people', ['ui.router', 'ngRoute', 'localytics.directives', 'ngFileUpload']);
     
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -10,12 +10,6 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         .state('home', {
             url: "/",
             templateUrl: "partials/list.html"
-        })
-        .state('language', {
-            url: "/languages",
-            templateUrl: "partials/languages.html",
-            controller: 'LanguageCtrl',
-            controllerAs: 'langVm'
         })
         .state('education', {
             url: "/education",
@@ -33,15 +27,4 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             url: "/404",
             templateUrl: "partials/404.html"
         });
-});
-
-app.directive('modal', function () {
-    return {
-        restrict: 'E',
-        scope: {
-            ctrlVm: '=ctrl',
-            itemName: '='
-        },
-        templateUrl: './views/tmpl/modal.html'
-    }
 });

@@ -3,11 +3,34 @@
 
     <table class="table table-striped table-condensed">
         <tr>
-            <td>Specialty</td>
+            <td>Education institute</td>
             <td>
-                <input type="text" class="form-control input-sm">
+                <select chosen multiple
+                        data-placeholder-text-multiple="'Choose an institute'"
+                        no-results-text="'Could not find any institute'"
+                        ng-model="person.info.institute"
+                        ng-options="institute.name for institute in person.institutes">
+                </select>
             </td>
         </tr>
+        <tr>
+            <td>Specialty</td>
+            <td>
+                <input type="text" class="form-control input-sm" ng-model="person.info.specialty">
+            </td>
+        </tr>
+        <tr>
+            <td>What language do you know?</td>
+            <td>
+                <select chosen multiple
+                        data-placeholder-text-multiple="'Choose a language'"
+                        no-results-text="'Could not find any language'"
+                        ng-model="person.info.language"
+                        ng-options="language for language in person.languages">
+                </select>
+            </td>
+        </tr>
+
     </table>
 
     <button type="submit" class="btn btn-success">

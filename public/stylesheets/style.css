@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(../../bower_components/bootstrap/dist/css/bootstrap.css);
 @font-face {
   font-family: "Futura";
   src: url("../fonts/16023_FUTURAN.eot");
@@ -9,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: #333333 !important; }
+  color: #333 !important; }
 
 input, button, textarea {
   font: inherit !important; }
@@ -23,6 +22,29 @@ h3 > span.label {
 
 .content {
   margin: 20px auto; }
+
+.tabs-content table {
+  width: 70%; }
+  .tabs-content table td, .tabs-content table th {
+    vertical-align: middle !important; }
+  .tabs-content table td:nth-child(2n) {
+    width: 45% !important; }
+    .tabs-content table td:nth-child(2n) input[type="text"] {
+      width: 95%; }
+    .tabs-content table td:nth-child(2n) .fa-trash-o {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -7pt;
+      margin-left: 5px;
+      font-size: 14pt !important; }
+      .tabs-content table td:nth-child(2n) .fa-trash-o:hover {
+        cursor: pointer;
+        font-size: 15pt !important; }
+    .tabs-content table td:nth-child(2n) .work-list {
+      margin-bottom: 5px; }
+  .tabs-content table td:nth-child(2n+1) {
+    width: 25% !important; }
 
 .profile {
   width: 600px;
@@ -39,9 +61,6 @@ h3 > span.label {
         width: 95%; }
       .profile .form-group label input[type="text"] {
         margin-top: 5px; }
-
-table td, table th {
-  vertical-align: middle !important; }
 
 .header {
   border-bottom: thick solid #4787be;
@@ -149,5 +168,16 @@ table td, table th {
 .tabs-content {
   border: 2px solid #4787be;
   padding: 30px; }
+
+.chosen-container {
+  width: 95% !important; }
+  .chosen-container li.search-field input.default {
+    width: inherit !important; }
+
+.datepicker table tr td.today {
+  background: #70a1cc !important; }
+
+.datepicker table tr td.active.active {
+  background: #4787be !important; }
 
 /*# sourceMappingURL=style.css.map */

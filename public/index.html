@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/bower/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/bower/chosen/chosen.css">
+    <link rel="stylesheet" href="/bower/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
     <base href="/">
 </head>
 <body>
@@ -16,14 +18,14 @@
 
         <nav>
             <ul class="nav nav-pills">
-                <li role="presentation" ui-sref-active="active" ui-sref="home"><a>Home</a></li>
+                <li role="presentation" ui-sref-active="active" ui-sref="home">
+                    <a>Home</a>
+                </li>
                 <li role="presentation" ui-sref-active="active" ui-sref="education"><a>Education</a></li>
-                <li role="presentation" ui-sref-active="active" ui-sref="language"><a>Languages</a></li>
             </ul>
         </nav>
 
         <i class="fa fa-user-plus" ui-sref="person"></i>
-        <!--<button ui-sref="person" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Add person</button>-->
 
     </div>
 
@@ -32,17 +34,30 @@
     <div class="footer">
         &copy; 2016. Developed by Roman Ovchinnik
     </div>
+
     <script src="/bower/jquery/dist/jquery.js"></script>
+    <script src="/bower/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/bower/angular/angular.js"></script>
     <script src="/bower/angular-route/angular-route.js"></script>
     <script src="/bower/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+
+    <!-- JQUERY CHOSEN -->
+    <script src="/bower/angular-chosen-localytics/dist/angular-chosen.js"></script>
+    <script src="/bower/chosen/chosen.jquery.js"></script>
+
+    <!-- FILE UPLOAD -->
     <script src="/bower/ng-file-upload/ng-file-upload.js"></script>
-    <script src="/javascripts/myScripts.js"></script>
+    <script src="/bower/ng-file-upload/ng-file-upload-shim.js"></script>
+
+    <!-- CONTROLLERS -->
     <script src="/javascripts/controllers/main.js"></script>
-    <script src="/javascripts/controllers/language.js"></script>
     <script src="/javascripts/controllers/education.js"></script>
     <script src="/javascripts/controllers/person.js"></script>
+    <script src="/javascripts/directives.js"></script>
+    <script src="/javascripts/filters.js"></script>
+    <script src="/javascripts/services.js"></script>
 </div>
 </body>
 </html>

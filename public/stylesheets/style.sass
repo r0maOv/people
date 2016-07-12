@@ -5,12 +5,10 @@
   font-weight: normal
   font-style: normal
 
-@import "../../bower_components/bootstrap/dist/css/bootstrap.css"
-
 body
   margin: 0
   padding: 0
-  color: #333333 !important
+  color: #333 !important
 
 input, button, textarea
   font: inherit !important
@@ -24,6 +22,30 @@ h3 > span.label
 
 .content
   margin: 20px auto
+
+.tabs-content
+  table
+    width: 70%
+    td, th
+      vertical-align: middle !important
+    td:nth-child(2n)
+      width: 45% !important
+      input[type="text"]
+        width: 95%
+      .fa-trash-o
+        position: absolute
+        top: 50%
+        right: 0
+        margin-top: -7pt
+        margin-left: 5px
+        font-size: 14pt !important
+        &:hover
+          cursor: pointer
+          font-size: 15pt !important
+      .work-list
+        margin-bottom: 5px
+    td:nth-child(2n+1)
+      width: 25% !important
 
 
 // PROFILE INFO
@@ -42,12 +64,6 @@ h3 > span.label
         width: 95%
       input[type="text"]
         margin-top: 5px
-
-
-
-table
-  td, th
-    vertical-align: middle !important
 
 .header
   border-bottom: thick solid #4787be
@@ -85,6 +101,7 @@ table
     font-style: normal
 
 
+// MODAL WINDOW
 .modal-wrapper
   position: fixed
   top: 0
@@ -120,6 +137,7 @@ table
       width: 100%
       padding: 10px
       text-align: center
+
 
 .person .nav
   margin-bottom: 15px
@@ -161,3 +179,18 @@ table
 .tabs-content
   border: 2px solid #4787be
   padding: 30px
+
+
+// CHOSEN DROPDOWN
+.chosen-container
+  width: 95% !important
+  li.search-field
+    input.default
+      width: inherit !important
+
+// DATEPICKER
+.datepicker table tr td.today
+  background: #70a1cc !important
+
+.datepicker table tr td.active.active
+  background: #4787be !important

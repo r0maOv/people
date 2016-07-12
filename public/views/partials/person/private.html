@@ -2,17 +2,12 @@
 
     <h1>{{title | firstLetter}}</h1>
 
-    {{PVm.data}}
-
     <table class="table table-condensed table-hover table-striped">
         <tr>
             <td>Profile Picture</td>
             <td>
-                <label class="btn btn-primary">
-                    <i class="fa fa-photo"></i> Choose a photo
-                    <!--<input type="file" upload-file="profile" class="upload-file" style="display: none">-->
-                </label>
-                <!--<span id="file-name"></span>-->
+                <input type="file" file-model="person.info.avatar">
+                <button ng-click="person.uploadFile()">upload me</button>
             </td>
         </tr>
         <tr>
@@ -25,19 +20,25 @@
         </tr>
         <tr>
             <td>Middle Name</td>
-            <td><input type="text" class="form-control input-sm" ></td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.middleName"></td>
         </tr>
         <tr>
-            <td>Date of Birtd</td>
-            <td><input type="text" class="form-control input-sm" ></td>
+            <td>Date of Birth</td>
+            <td>
+                <input type="text" class="form-control input-sm" datepicker ng-model="person.info.dateBirth" readonly>
+            </td>
         </tr>
         <tr>
-            <td>Place of Birtd</td>
-            <td><input type="text" class="form-control input-sm" ></td>
+            <td>Place of Birth</td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.placeBirth"></td>
         </tr>
         <tr>
             <td>Address</td>
-            <td><input type="text" class="form-control input-sm" ></td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.address"></td>
+        </tr>
+        <tr>
+            <td>Telephone</td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.phone"></td>
         </tr>
     </table>
 

@@ -25,7 +25,6 @@ sass.render({
 // mongoose init
 mongoose.connect('mongodb://localhost/people');
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
-require('./models/language');
 
 var app = express();
 

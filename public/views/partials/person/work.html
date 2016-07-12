@@ -3,9 +3,24 @@
 
     <table class="table table-striped table-condensed">
         <tr>
-            <td>Current position</td>
+            <td>Current Position</td>
+            <td><input type="text" class="form-control input-sm" ng-model="person.info.middleName"></td>
+        </tr>
+        <tr>
+            <td>The beginning of work on the current position</td>
+            <td><input type="text" class="form-control input-sm" datepicker readonly></td>
+        </tr>
+
+        <tr>
+            <td>Positions</td>
             <td>
-                <input type="text" class="form-control input-sm">
+                <div class="work-list" ng-repeat="position in person.info.positions" style="position: relative">
+                    <input type="text" class="form-control input-sm" ng-bind="position.title">
+                    <i class="fa fa-trash-o" ng-click="person.deletePosition($index)"></i>
+                </div>
+                <button class="btn btn-sm btn-primary" ng-click="person.addPosition()">
+                    <i class="fa fa-plus"></i> Add new
+                </button>
             </td>
         </tr>
     </table>
