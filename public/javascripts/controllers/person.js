@@ -24,11 +24,16 @@ app.controller('PersonCtrl', ['$http', '$scope', 'fileUpload', function ($http, 
        self.info.positions.splice(index, 1);
     };
 
+    self.uploadAvatar = function (file) {
+        var uploadUrl = "/api/people/upload";
+        self.avatar = fileUpload.uploadFileToUrl(file, uploadUrl);
+    };
+
     self.uploadFile = function(){
         var file = self.info.avatar;
         console.log('file is ' );
         console.dir(file);
-        var uploadUrl = "/api/people/";
+        var uploadUrl = "/api/people/upload";
         fileUpload.uploadFileToUrl(file, uploadUrl);
     };
 

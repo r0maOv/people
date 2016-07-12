@@ -8,7 +8,7 @@ app.service('fileUpload', ['$http', function ($http) {
             transformRequest: angular.identity,
             headers: {'Content-Type': undefined}
         }).then(function (res) {
-            console.log(res);
+            console.log(res.data);
         }, function (err) {
             console.log(err);
         })
